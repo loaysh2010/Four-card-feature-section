@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.container {
+  width: 1320px;
+}
+@media (max-width: 767px) {
+  body {
+    padding: 100px 20px;
+    display: block;
+  }
+  .container {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
+.container .top-content {
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+}
+.container .top-content h1 {
+  font-size: 40px;
+}
+.container .top-content h1:first-child {
+  font-size: 38px;
+  font-weight: 500;
+}
+.container .top-content p {
+  width: 500px;
+  margin: 30px auto;
+  color: hsl(229, 6%, 66%);
+}
+@media (max-width: 767px) {
+  .container .top-content h1 {
+    font-size: 20px;
+  }
+  .container .top-content h1:first-child {
+    font-size: 19px;
+  }
+  .container .top-content p {
+    width: 100%;
+  }
+}
+
+.bottom-content {
+  margin-top: 70px;
+  display: grid;
+  gap: 30px;
+  /* grid-template-columns: repeat(3,minmax(300px,1fr)); */
+}
+
+.bottom-content .box {
+  padding: 30px;
+  height: 300px;
+  margin: auto 0;
+  box-shadow: 3px 6px 11px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  position: relative;
+}
+
+.bottom-content .box h2 {
+  color: hsl(234, 12%, 34%);
+}
+.bottom-content .box p {
+  margin-top: 15px;
+  color: hsl(229, 6%, 66%);
+  margin-right: 30px;
+}
+.bottom-content .box img {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.bottom-content .box.green {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.bottom-content .box.red,
+.bottom-content .box.orange {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.bottom-content .box.red {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+.bottom-content .box.orange {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+.bottom-content .box.blue {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media (max-width: 767px) {
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .bottom-content .box {
+    height: 250px;
+  }
+  .bottom-content .box img {
+    right: 30px;
+    bottom: 30px;
+  }
+}
